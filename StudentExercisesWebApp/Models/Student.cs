@@ -25,5 +25,7 @@ namespace StudentExercisesWebApp.Models
 
         public virtual Cohort Cohort { get; set; }
         public virtual ICollection<StudentExercise> StudentExercises { get; set; }
+
+        public string FullName { get { return FirstName + " " + LastName; } }
     }
 }
