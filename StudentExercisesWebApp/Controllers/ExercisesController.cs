@@ -35,6 +35,8 @@ namespace StudentExercisesWebApp.Controllers
             }
 
             var exercise = await _context.Exercises
+                 .Include(s => s.StudentExercises)
+                    .ThenInclude(se => se.Student)
                 .FirstOrDefaultAsync(m => m.ExerciseId == id);
             if (exercise == null)
             {

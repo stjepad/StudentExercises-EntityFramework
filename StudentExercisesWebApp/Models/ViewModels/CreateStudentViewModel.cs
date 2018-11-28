@@ -11,6 +11,7 @@ namespace StudentExercisesWebApp.Models.ViewModels
     {
         public Student Student { get; set; }
         public List<SelectListItem> AvailableExercises { get; private set; }
+
         public List<int> SelectedExercises { get; set; }
         public List<SelectListItem> Cohorts { get; set; }
 
